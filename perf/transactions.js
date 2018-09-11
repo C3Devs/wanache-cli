@@ -63,6 +63,7 @@ server.listen(port, function(err) {
 
     runAverage("Running transactions test", 4, 1000, function(n, cb) {
       web3.eth.sendTransaction({
+        Txtype: '0x01',
         from: accounts[0],
         to: accounts[1],
         value: 500, // wei
